@@ -1,0 +1,35 @@
+﻿<div class="center-container">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>Register</mat-card-title>
+            </mat-card-header>
+            <div class="flex-container">
+                <mat-form-field>
+                    <input matInput placeholder="First Name" type="text" formControlName="firstName">
+                    <mat-error>First Name is required</mat-error>
+                </mat-form-field>
+
+                <mat-form-field>
+                    <input matInput placeholder="Last Name" type="text" formControlName="lastName">
+                    <mat-error>Last Name is required</mat-error>
+                </mat-form-field>
+
+                <mat-form-field>
+                    <input matInput placeholder="Username" type="text" formControlName="username">
+                    <mat-error>Username is required</mat-error>
+                </mat-form-field>
+
+                <mat-form-field>
+                    <input matInput placeholder="Password" formControlName="password" [type]="hide ? 'password' : 'text'">
+                    <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+                    <mat-error>Password is required</mat-error>
+                </mat-form-field>
+            </div>
+            <mat-card-actions>
+                <button mat-button>Register</button>
+                <a [routerLink]="['/login']" mat-button>Cancel</a>
+            </mat-card-actions>
+        </mat-card>
+    </form>
+</div>

@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html, body { 
+    height: 100%;
+    min-height: 100%;}
+body { margin: 16px; font-family: 'Roboto', sans-serif;   }
+.snackbarError{ background: red; color:white}
+.snackbarSuccess{ background: green; color:white}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+  } 
+  .center-container {
+    height: 100%;
+    min-height: 100%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+  } 
